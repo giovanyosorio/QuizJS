@@ -10,7 +10,7 @@
             margin: 1rem auto;
             padding: 3rem;
             font-family: sans-serif;
-            background-color: rgb(243, 228, 202);
+          
                   }
         header {
             width: 50%;
@@ -51,13 +51,13 @@
             font-size: medium;
             border-radius: 5px;
             cursor: pointer;
-            background-color: papayawhip;
+    
      
         }
-        button:hover {
+/*         button:hover {
 background-color:rgb(249, 217, 165);
 
-        }
+        } */
         .correct {
             background-color: lightgreen;
         }
@@ -106,20 +106,21 @@ background-color:rgb(249, 217, 165);
     const fact ={
         statement:" True + False = 1",
         answer:true,
-        explanation:"bla bla bla "
+        explanation:"bl  bla bla "
     }
 
     
     // TODO 3: Set the text of the statement element to the fact's statement
    // statement.innerText=fact.statement
-   statement.textContent=fact.statement
-    explanation.innerText=fact.explanation
+    statement.textContent=fact.statement
+
         
 
     // TODO 4: Declare disable & enable functions to set or remove the "disabled" attribute from a given button element
     // disable(button) should set the button element's attribute "disabled" to the value ""
+    const disable=(button) =>  button.setAttribute("disabled","")
     // enable(button) should remove the attribute "disabled" from the button element
-
+    const enable=(button) =>  button.removeAttribute("disabled")
 
 
     // TODO 5: Declare an isCorrect function that compares a guess to the right answer

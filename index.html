@@ -135,6 +135,11 @@ background-color:rgb(249, 217, 165);
 
 
     // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
+    for (const button of optionButtons) {
+        
+        button.addEventListener("click",event=>{
+            explanation.textContent=fact.explanation
+
             // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
 
 
@@ -147,7 +152,8 @@ background-color:rgb(249, 217, 165);
             // Use a conditional to compare the guess to the fact's answer
             // and add the "correct"/"incorrect" class as appropriate
 
-    
+        })
+    }
 
   </script>
 </html>

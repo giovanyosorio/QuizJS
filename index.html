@@ -105,7 +105,7 @@ background-color:rgb(249, 217, 165);
     // Its value should be an object with a statement, true/false answer, and explanation 
     const fact ={
         statement:" True + False = 1",
-        answer:true,
+        answer:"true",
         explanation:"bl  bla bla "
     }
 
@@ -125,6 +125,8 @@ background-color:rgb(249, 217, 165);
 
     // TODO 5: Declare an isCorrect function that compares a guess to the right answer
     function isCorrect(guess) {
+        console.log(guess,fact.answer);
+
         return guess==fact.answer
         
     }
@@ -132,8 +134,6 @@ background-color:rgb(249, 217, 165);
     
     // isCorrect(guess) should return true if the guess matches the fact's answer
     
-
-
     // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
     for (const button of optionButtons) {
         
@@ -154,7 +154,14 @@ background-color:rgb(249, 217, 165);
             // Get the guessed value from the clicked button
             // Use a conditional to compare the guess to the fact's answer
             // and add the "correct"/"incorrect" class as appropriate
-
+            //console.log(event.returnValue);
+            if(isCorrect(button.value)){
+                console.log("correct",button.value);
+                button.classList.add("correct")
+            }else{
+                console.log("incorrect",button.value);
+                button.classList.add("incorrect")
+            }
         })
     }
 
